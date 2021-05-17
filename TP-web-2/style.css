@@ -1,0 +1,33 @@
+*
+{
+	font-family: Calibri;
+}
+
+fieldset
+{
+	position: relative;
+	margin-right: 15%;
+	margin-left: 15%;
+	top: 250px;
+	border-radius: 5px;
+}
+
+#bt1
+{
+	position: relative;
+	left: 160px;
+}
+
+#anl
+{
+	position: relative;
+	right: 130px;
+}
+
+body
+{
+background-color:#40FFC7;
+margin-right: 35%;
+margin-left: 35%;
+text-align: center;
+}

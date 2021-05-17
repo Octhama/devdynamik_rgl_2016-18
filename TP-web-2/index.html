@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enregistrement</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+	<body>
+	<form name="form">
+		<fieldset>
+		<legend id="lgd">Enregistrement</legend>
+			<table>
+								
+				<tr>
+					<td><label for="psd">Pseudo :</label></td>
+					<td><input type="text" id=psd name="psd" /></td>
+				</tr>
+
+				<tr>
+					<td><label for="mdp">Mot de passe:</label></td>
+					<td><input type="password" id="mdp" name="mdp" /></td>
+				</tr>
+
+				<tr>
+					<td><input type="button"  value="S'Enregistrer" id="bt1"></td>
+					<td><input  type="reset"  value="Annuler" id="anl"></td>
+					
+				</tr>
+				
+			</table>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+
+		var bouton= document.getElementById("bt1");
+		
+		var legend= document.getElementById("lgd");
+		var id;
+		var motdepasse;
+		
+		p=document.forms.form.appendChild(document.createElement("p"));
+		bouton.onclick=function(){
+			var pseudo = document.forms.form.elements["psd"];
+			var mdp = document.forms.form.elements["mdp"];
+
+			if (bouton.value=="S'Enregistrer") {
+				id = pseudo.value;
+				motdepasse = mdp.value;
+				legend.textContent = "Authentification";
+				bouton.value = "Valider";
+				pseudo.value = "";
+				mdp.value ="";
+				return; 
+			}
+			else{
+				p.textContent="";
+				if (id==pseudo.value && motdepasse==mdp.value) 
+					p.textContent="Bienvenue"+" "+ pseudo.value+"!"+ "Vous êtes connecté(e) !";
+				else
+				p.textContent="Veuillez bien entrer vos informations !!! Merci !!! ";
+			}
+		}
+	</script>
+	</body>
+	
+</html>

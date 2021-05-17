@@ -1,0 +1,29 @@
+*
+{
+	font-family: Calibri;
+}
+
+fieldset
+{
+	position: relative;
+	margin-right: 35%;
+	margin-left: 35%;
+	top: 250px;
+	border-radius: 5px;
+}
+
+#bt1
+{
+	position: relative;
+	left: 270px;
+}
+
+#centrer{
+	position: relative;
+	top: 200px;
+	font-size: 100px;
+	font-style: italic;
+}
+
+
+
